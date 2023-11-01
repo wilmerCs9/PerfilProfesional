@@ -109,4 +109,90 @@ var respuesta =
         tittle: "respuesta",
         html: respuesta,
     })
- 
+
+    //Operadores Logicos 
+
+
+    //OT || CON IF
+
+    var age = 31;
+
+    if (age == 32 || numeric == 7){
+        console.log("entra if")
+        age+=2;
+    }
+
+    else{
+        console.log("entra else")
+        age-=2;
+    }
+
+    //FOR
+
+    console.log(array_text.length);
+    
+    for(let i=0; i<7; i++){
+        console.log(array_text[i]+(i+1))
+    }
+
+    //while
+
+    let position = 0;
+    while(position < array_text.length){
+        console.log(array_text[position]+(position+1))
+        position++;
+    }
+
+    //do while
+
+    let w = 0;
+    do{
+        console.log(array_text[w]+(w+1));
+        w++;
+    }
+    while(array_text.length);
+
+    //EVENTOS Y FUNCIONES
+
+    // function load_page(){
+    //     alert("Bienvenido");
+    // }
+
+
+    function box_onblur(){
+        const box_onblur = document.querySelector("box_onblur");
+        if(box_onblu.value.length <=2){
+            alert("Problemas");
+
+        }
+    }
+
+    const btn_changeColor = document.querySelector("#change_color");
+    btn_changeColor.addEventListener("click", () => {
+
+        document.body.style.backgroundColor = "red";
+        document.body.style.color = "#fff";
+    });
+
+    
+    const form       = document.getElementById ("form_register");
+    const nombres    = document.getElementById ("nombres");
+    const aplellidos = document.getElementById ("apellidos");
+    const validation = document.getElementById ("validation");
+
+    form.addEventListener("submit", name_event => {
+        name_event.preventDefault();
+        let info = " ";
+        if(nombres.value.length <= 2 || aplellidos.value.length){
+            info += "nombres o apelldio incorrectos"
+            validation.style.color = "red"
+
+        }
+        else{ 
+            info += "su nombre es: " + nombres.value + " " + aplellidos;
+            validation.style.color = "green"
+
+        }
+        validation.innerText = info;
+
+    });
