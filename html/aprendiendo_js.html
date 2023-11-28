@@ -1,47 +1,39 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-<head> 
-    <meta charset="UTF-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Document</title> 
-</head> 
-<body onload="load_page()"> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="load_page()">
+    
+    <label for="" id="box_one"></label>
+    <label for="" id="box_two"></label>
 
+    <button onclick="change_Color()">
+        CAMBIAR COLOR
+    </button>
+    <button id="clear_color">LIMPIAR COLOR</button>
 
-
-    <label for="" id="box_one"></label> 
-    <label for="" id="box_two"></label> 
-
-    <br>
-
-    <input type="text" id="box_onblur" onblur="box_onblur()" placeholder="Escriba algo" size="30" >
-    <button id="change_color">cambiar color</button>
-
-    <form id="dorm_register">
-        <label for="nombre"> Nombres</label>
-        <input type="text" id="nombres" size="30" placeholder="Escriba el nombre">
+    <form id="form_register"  autocomplete="off">
+        <label for="nombres">Nombres: </label>
+        <input type="text" id="nombres" size="30" placeholder="Escriba sus nombres" onblur="validate()">
         <br>
-        <label for="apellidos"> Apellidos</label>
-        <input type="text" id="apellido" size="30" placeholder="Escriba el apellido">
+        <label for="apellidos">Apellidos: </label>
+        <input type="text" id="apellidos" size="30" placeholder="Escriba sus apellidos" >
         <br>
-
-        <button type="submit">Registarse</button>
-        <button type="reset">Limpiar</button>
+        <button type="submit">REGISTRARSE</button>
+        <button type="reset">LIMPIAR</button>
         <br>
-
-        <label id="validation"></label>
-
+        <p id="information"></p>
     </form>
+    <br><br>
 
-    <br>
-     
-    <script src="../js/jquery-3.7.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
-    <script src="../js/functions.js"></script> 
-    <script> 
-        // alert("Wilmer Casadiegos") 
-        console.log("Bienvenidos"); 
-    </script> 
-</body> 
+
+    <script src="../js/code.jquery.com_jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/function.js"></script>
+   
+</body>
 </html>
